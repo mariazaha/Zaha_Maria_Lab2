@@ -28,5 +28,6 @@ namespace Zaha_Maria_Lab2.Data
                 .WithOne(br => br.Book)
                 .HasForeignKey<Borrowing>(br => br.BookID); 
         }
+        public DbSet<Zaha_Maria_Lab2.Models.Member> Member { get; set; } = default!;
     }
 }
