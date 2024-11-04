@@ -1,4 +1,6 @@
-﻿namespace Zaha_Maria_Lab2.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Zaha_Maria_Lab2.Models
 {
     public class Author
     {
@@ -10,6 +12,16 @@
         {
             get { return $"{FirstName} {LastName}"; }
         }
+
+        [Display(Name = "Full Name")]
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
+
 
         public ICollection<Book>? Books { get; set; }
 
