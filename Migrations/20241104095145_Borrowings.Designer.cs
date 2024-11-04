@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Zaha_Maria_Lab2.Data;
 
@@ -11,9 +12,11 @@ using Zaha_Maria_Lab2.Data;
 namespace Zaha_Maria_Lab2.Migrations
 {
     [DbContext(typeof(Zaha_Maria_Lab2Context))]
-    partial class Zaha_Maria_Lab2ContextModelSnapshot : ModelSnapshot
+    [Migration("20241104095145_Borrowings")]
+    partial class Borrowings
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
