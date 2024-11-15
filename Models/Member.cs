@@ -18,8 +18,7 @@ namespace Zaha_Maria_Lab2.Models
         public string? Adress { get; set; }
 
         public string Email { get; set; }
-        [RegularExpression(@"^\(?([0-9]{4})\)?[-. ]?([0-9]{3})[-. ]?([0
-9]{3})$", ErrorMessage = "Telefonul trebuie sa fie de forma '0722-123-123' sau '0722.123.123' sau '0722 123 123'")] 
+        [RegularExpression(@"^0\d{9}$", ErrorMessage = "Numărul de telefon trebuie să înceapă cu 0 și să aibă exact 10 cifre.")]
         public string? Phone { get; set; }
 
         [Display(Name = "Full Name")]
