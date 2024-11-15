@@ -10,11 +10,12 @@ namespace Zaha_Maria_Lab2.Models
 
         [Display(Name = "Book Title")]
         public string Title { get; set; }
-        
+
+       
 
         [Column(TypeName = "decimal(6, 2)")]
         public decimal Price { get; set; }
-
+       
         [DataType(DataType.Date)]
         public DateTime PublishingDate { get; set; }
 
